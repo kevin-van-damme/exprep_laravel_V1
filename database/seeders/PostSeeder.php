@@ -13,10 +13,6 @@ class PostSeeder extends Seeder
      */
     public function run(): void
     {
-        Post::create([
-            'title' => 'Post 1',
-            'description' => 'Description 1',
-            'is_completed' => false,
-        ]);
+        Post::factory()->count(10)->create();
     }
 }
